@@ -19,6 +19,9 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+
+  var randomString = "";
+
 var lowerCase = confirm("Do you want your password to contain lowercase letters?")
 var upperCase = confirm("Do you want your password to contain uppercase letters?")
 var num = confirm("Do you want your password to contain any numbers?")
@@ -38,6 +41,28 @@ else if (lowerCase === false && upperCase === false && num === false && specialC
   var num = confirm("Do you want your password to contain any numbers?")
   var specialCharacter = confirm("Do you want your password to contain special characters?")
 }
+
+if(lowerCase){
+  enter = enter + lowerLetters;
+}
+
+if(upperCase){
+  enter = enter + upperLetters;
+}
+
+if(num){
+  enter = enter + number;
+}
+
+if(specialCharacter){
+  enter = enter + character;
+}
+
+for (var i = 0; i < passwordLength; i++){
+  randomString += enter.charAt(Math.floor(Math.random() * enter.length));
+}
+
+passwordText = randomString;
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword){
 //Asks for input from user
