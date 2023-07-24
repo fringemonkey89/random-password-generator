@@ -1,5 +1,14 @@
 // Assignment code here
+//variables for password generator
+var character = " !\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
 
+var number = "0123456789";
+
+var lowerLetters = "abcdefghijklmnopqrstuvwxyz";
+
+var upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+var enter = "";
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -10,46 +19,26 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+var lowerCase = confirm("Do you want your password to contain lowercase letters?")
+var upperCase = confirm("Do you want your password to contain uppercase letters?")
+var num = confirm("Do you want your password to contain any numbers?")
+var specialCharacter = confirm("Do you want your password to contain special characters?")
+var passwordLength = confirm("Choose a password length of at least 8 characters and no more than 128 characters.")
 }
 
+if (passwordLength < 8 || passwordLength > 128){
+  alert("your password is not bewtween 8 characters or 128 characters. Try again.")
+  var passwordLength = prompt("choose a password that is at least 8 characters but no more than 128 characters")
+}
+
+else if (lowerCase === false && upperCase === false && num === false && specialCharacter === false){
+  alert("you have to choose at least one criteria")
+  var lowerCase = confirm("Do you want your password to contain lowercase letters?")
+  var upperCase = confirm("Do you want your password to contain uppercase letters?")
+  var num = confirm("Do you want your password to contain any numbers?")
+  var specialCharacter = confirm("Do you want your password to contain special characters?")
+}
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword){
 //Asks for input from user
-enter = parseInt(prompt("How many characters would you like in your password? Choose between 8 and 128"));
-
-//if statement for validation
-if (enter = 0){
-  alert("please enter a value")
-} else if (enter < 8 || enter > 128){
-  enter = parseInt(prompt("You have to choose between 8 and 128 characters"))
 }
-else{
-confirmNum = confirm("will this contain numbers?");
-confirmCharacter = confirm("will this contain special characters?");
-confirmUpper = confirm("WIll this contain uppercase letters");
-confirmLower = confirm("Will this contain lowercase letters?");
-};
-}
-
-var enter;
-var confirmNum;
-var confirmCharacter;
-var confirmUpper;
-var confirmLower;
-
-character = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
-
-number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-lowerLetters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-space=[];
-
-var upperCase = function(x) {
-  return x.toUpperCase()
-};
-
-upperLetters = lowerLetters.map(upperCase);
-
-function writePassword
