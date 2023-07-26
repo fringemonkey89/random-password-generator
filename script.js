@@ -43,7 +43,7 @@ if(lowerCase){
 if(upperCase){
   enter = enter + upperLetters;
 }
-if(number){
+if(num){
   enter = enter + number;
 }
 if(specialCharacter){
