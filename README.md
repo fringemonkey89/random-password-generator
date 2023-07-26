@@ -23,5 +23,16 @@
 
 ![](./password-screenshot.png)
 
+## Installation
+   N/A
 
-## Links
+## Credits
+   N/A
+
+## Website Link
+
+https://fringemonkey89.github.io/My-Portfolio/
+
+## License
+ MIT License
+
