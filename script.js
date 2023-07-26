@@ -28,7 +28,7 @@ if (passwordLength < 8 || passwordLength > 128){
 }
 
 //this code is for anyone who doesn't select any criteria and asks them to choose one
-if (lowerLetters === false && upperLetters === false && number === false && character === false){
+if (lowerCase === false && upperCase === false && num === false && specialCharacter === false){
   alert("you have to choose at least one criteria")
   var lowerCase = confirm("Do you want your password to contain lowercase letters?")
   var upperCase = confirm("Do you want your password to contain uppercase letters?")
