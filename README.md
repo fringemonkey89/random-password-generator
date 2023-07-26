@@ -30,8 +30,7 @@
    N/A
 
 ## Website Link
-
-https://fringemonkey89.github.io/My-Portfolio/
+https://fringemonkey89.github.io/random-password-generator/
 
 ## License
  MIT License
