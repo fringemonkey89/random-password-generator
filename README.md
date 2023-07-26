@@ -21,7 +21,7 @@
     
 ## Screenshot
 
-![](./password-screenshot.png)
+![](./password-gen.png)
 
 ## Installation
    N/A
